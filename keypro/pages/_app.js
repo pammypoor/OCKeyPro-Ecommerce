@@ -1,7 +1,12 @@
-import '../styles/globals.css'
+import { AppWrapper } from '../state.js'; // import based on where you put it
+import '@styles/globals.css';
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+export function Application({ Component, pageProps }) {
+  return (
+    <AppWrapper>
+      <Component {...pageProps} />
+    </AppWrapper>
+  );
 }
 
-export default MyApp
+export default Application;
